@@ -12,15 +12,15 @@ const categoryTypeDefs = gql`
     }
 
     extend type Query {
-        categoryById(name: String!): Category
+        categoryById(name: String!): Category!
     }
 
     extend type Query {
-        allCategories(): [Category]
+        allCategories: [Category]!
     }
 
     extend type Mutation {
-        createCategory(category: CategoryInput!): Category
+        createCategory(category: CategoryInput!): Category!
     }
 `;
 

@@ -14,19 +14,19 @@ const stockTypeDefs = gql`
     }
 
     extend type Query {
-        stockByProduct(product: String!): Stock
+        stockByProduct(product: String!): Stock!
     }
 
     extend type Query {
-        allStock(): [Stock]
+        allStock: [Stock]!
     }
 
     extend type Mutation {
-        createStock(stock: Stock!): Stock
+        createStock(stock: StockInput!): Stock!
     }
 
     extend type Mutation {
-        updateStock(stock: Stock!, product: String!): Stock
+        updateStock(stock: StockInput!, product: String!): Stock!
     }
 `;
 

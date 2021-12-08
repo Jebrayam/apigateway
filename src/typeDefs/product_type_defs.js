@@ -17,27 +17,27 @@ const productTypeDefs = gql`
     }
 
     extend type Query {
-        productByName(name: String!): Product
+        productByName(name: String!): Product!
     }
 
     extend type Query {
-        productByCategory(category: String!): [Product]
+        productByCategory(category: String!): [Product]!
     }
 
     extend type Query {
-        allProduct(): [Product]
+        allProduct: [Product]!
     }   
     
     extend type Mutation {
-        createProduct(product: ProductInput!): Product
+        createProduct(product: ProductInput!): Product!
     }
 
     extend type Mutation {
-        updateProduct(product: Product!, name: String!): Product
+        updateProduct(product: ProductInput!, name: String!): Product!
     }
 
     extend type Mutation {
-        deleteProduct(name: String!): Boolean
+        deleteProduct(name: String!): Boolean!
     }
 `;
 

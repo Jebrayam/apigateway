@@ -21,8 +21,7 @@ const authTypeDefs = gql`
         last_name: String!
         phone_number: String!
         address: String!
-        password: String!    
-        
+        password: String!            
     }
 
     type UserDetail {
