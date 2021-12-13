@@ -3,7 +3,7 @@ const { gql } = require('apollo-server');
 const stockTypeDefs = gql`
     type Stock {
         product: String!
-        date: String!
+        updateDate: String!
         quantity: Int!
     }
 
