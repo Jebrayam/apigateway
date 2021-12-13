@@ -30,8 +30,7 @@ const authTypeDefs = gql`
         first_name: String!
         last_name: String!
         phone_number: String!
-        address: String!
-        password: String! 
+        address: String!        
     }
 
     type Mutation {
